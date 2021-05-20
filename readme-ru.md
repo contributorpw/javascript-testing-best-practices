@@ -2,44 +2,44 @@
 
 <br/>
 
-# 👇 Why this guide can take your testing skills to the next level
+# 👇 Почему это руководство может поднять ваши навыки тестирования на следующий уровень
 
 <br/>
 
-## 📗 46+ best practices: Super-comprehensive and exhaustive
+## 📗 46+ лучших практик: супер всеобъемлющая и исчерпывающая коллекция
 
-This is a guide for JavaScript & Node.js reliability from A-Z. It summarizes and curates for you dozens of the best blog posts, books and tools the market has to offer
+Это руководство для улучшения надежности JavaScript & Node.js от А-Я. Оно суммирует и курирует для вас десятки лучших статей, книг и инструментов, предлагаемых по теме.
 
-## 🚢 Advanced: Goes 10,000 miles beyond the basics
+## 🚢 Продвинутые темы: уходит далеко за пределы основы
 
-Hop into a journey that travels way beyond the basics into advanced topics like testing in production, mutation testing, property-based testing and many other strategic & professional tools. Should you read every word in this guide your testing skills are likely to go way above the average
+Отправьтесь в путь за пределы основы в расширенные и передовые темы, такие как тестирование в производстве, тестирование мутаций, тестирование на основе собственности и многие другие стратегические и профессиональные инструменты.Прочитав это руководство внимательно, ваши навыки тестирования, вероятно, поднимутся выше среднего
 
-## 🌐 Full-stack: front, backend, CI, anything
+## 🌐 Полный стек: front, backend, CI, что угодно
 
-Start by understanding the ubiquitous testing practices that are the foundation for any application tier. Then, delve into your area of choice: frontend/UI, backend, CI or maybe all of them?
-
-<br/>
-
-### Written By Yoni Goldberg
-
-- A JavaScript & Node.js consultant
-- 📗 [Testing Node.js & JavaScript From A To Z](https://www.testjavascript.com) - My comprehensive online course with more than [10 hours of video](https://www.testjavascript.com), 14 test types and more than 40 best practices
-- [Follow me on Twitter ](https://twitter.com/goldbergyoni/)
+Начните с понимания повсеместных методов тестирования, которые являются основой для любого уровня приложения. Затем переключитесь на нужное вам направление: frontend/Ui, backend, CI или, может быть, все они вместе?
 
 <br/>
 
-### Translations - read in your own language
+### От имени Йони Голдберга
 
-- 🇨🇳[Chinese](readme-zh-CN.md) - Courtesy of [Yves yao](https://github.com/yvesyao)
-- 🇰🇷[Korean](readme.kr.md) - Courtesy of [Rain Byun](https://github.com/ragubyun)
-- 🇵🇱[Polish](readme-pl.md) - Courtesy of [Michal Biesiada](https://github.com/mbiesiad)
-- 🇪🇸[Spanish](readme-es.md) - Courtesy of [Miguel G. Sanguino](https://github.com/sanguino)
-- 🇧🇷[Portuguese-BR](readme-pt-br.md) - Courtesy of [Iago Angelim Costa Cavalcante](https://github.com/iagocavalcante) , [Douglas Mariano Valero](https://github.com/DouglasMV) and [koooge](https://github.com/koooge)
-- Want to translate to your own language? please open an issue 💜
+- Консультант JavaScript и Node.js
+- 📗 [Testing Node.js & JavaScript From A To Z](https://www.testjavascript.com) - Мой комплексный онлайн курс с более чем [10 часами видео](https://www.testjavascript.com) и 14 типов тестов и с более 40 лучшими практиками
+- [Следите за мной в Twitter](https://twitter.com/goldbergyoni/)
+
+<br/>
+
+### Переводы - читайте на своем языке
+
+- 🇨🇳[Китайский](readme-zh-CN.md) - Благодаря [Yves yao](https://github.com/yvesyao)
+- 🇰🇷[Корейский](readme.kr.md) - Благодаря [Rain Byun](https://github.com/ragubyun)
+- 🇵🇱[Польский](readme-pl.md) - Благодаря [Michal Biesiada](https://github.com/mbiesiad)
+- 🇪🇸[Испанский](readme-es.md) - Благодаря [Miguel G. Sanguino](https://github.com/sanguino)
+- 🇧🇷[Португальский](readme-pt-br.md) - Благодаря [Iago Angelim Costa Cavalcante](https://github.com/iagocavalcante) , [Douglas Mariano Valero](https://github.com/DouglasMV) и [koooge](https://github.com/koooge)
+- Хотите перевести на свой собственный язык? Пожалуйста, откройте проблему 💜
 
 <br/><br/>
 
-## `Table of Contents`
+## `Содержание`
 
 #### [`Section 0: The Golden Rule`](#section-0️⃣-the-golden-rule)
 
