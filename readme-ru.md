@@ -41,9 +41,9 @@
 
 ## `Содержание`
 
-#### [`Section 0: The Golden Rule`](#section-0️⃣-the-golden-rule)
+#### [`Раздел 0️: Золотое правило`](#раздел-0️⃣-золотое-правило)
 
-A single advice that inspires all the others (1 special bullet)
+Важный совет, общий для всех остальных (1 специальная серебрянная пуля)
 
 #### [`Section 1: The Test Anatomy`](#section-1-the-test-anatomy-1)
 
@@ -67,26 +67,26 @@ Guidelines for CI in the JS world (9 bullets)
 
 <br/><br/>
 
-# Section 0️⃣: The Golden Rule
+# Раздел 0️⃣: Золотое правило
 
 <br/>
 
-## ⚪️ 0 The Golden Rule: Design for lean testing
+## ⚪️ 0 Золотое правило: Разрабатывайте для надежного тестирования
 
-:white_check_mark: **Do:**
-Testing code is not like production-code - design it to be dead-simple, short, abstraction-free, flat, delightful to work with, lean. One should look at a test and get the intent instantly.
+:white_check_mark: **Делайте:**
+Тестовый код не похож на производственный -  разрабатывайте так, чтобы он был однозначным, коротким, безболезненным, плоским, простым для работы, надежным. Нужно смотреть на тест и мгновенно получить понимание, что происходит.
 
-Our minds are full with the main production code, we don't have 'headspace' for additional complexity. Should we try to squeeze yet another challenging code into our poor brain it will slow the team down which works against the reason we do testing. Practically this is where many teams just abandon testing.
+Наши умы полны основного производственного кода, у нас нет "пространства в голове" для дополнительной сложности. Должны ли мы попытаться поместить еще один сложный код в нашу голову? Этот код замедляет команду, которая работает против причины, по которой мы тестируем. Практически это то место, где многие команды просто забрасывают тестирование.
 
-The tests are an opportunity for something else - a friendly and smiley assistant, one that it's delightful to work with and delivers great value for such a small investment. Science tells us that we have two brain systems: system 1 is used for effortless activities like driving a car on an empty road and system 2 which is meant for complex and conscious operations like solving a math equation. Design your test for system 1, when looking at test code it should _feel_ as easy as modifying an HTML document and not like solving 2X(17 × 24).
+Тесты - это возможность для чего-то другого - дружелюбный и приятный помощник, который восхитительно работает и обеспечивает большую ценность для таких небольших инвестиций. Наука говорит нам, что у нас есть две системы мозга: первая система используется для легких мероприятий, таких как вождение автомобиля на пустой дороге, и вторая системе, которая предназначена для сложных и сознательных операций, таких как решение математического уравнения. Разрабатывайте свой тест для первой системы, когда смотрите на тестовый код, он должен _чувствоваться_, будто изменяется разметка документа HTML, а не как решение `2x (17 × 24)`.
 
-This can be achieved by selectively cherry-picking techniques, tools and test targets that are cost-effective and provide great ROI. Test only as much as needed, strive to keep it nimble, sometimes it's even worth dropping some tests and trade reliability for agility and simplicity.
+Это может быть достигнуто путем выбора отдельных техник, инструментов и тестовых целей, которые являются экономически эффективными и обеспечивают отличную окупаемость. Тестируйте только то, что нужно, стремитесь держать тестирование шустрым, иногда даже стоит бросить некоторые испытания с целью сохранения ловкости и простоты.
 
-![alt text](/assets/headspace.png "We have no head room for additional complexity")
+![alt text](/assets/headspace.png "У нас нет места в голове для дополнительной сложности")
 
-Most of the advice below are derivatives of this principle.
+Большинство советов ниже являются производными этого принципа.
 
-### Ready to start?
+### Готовы начать?
 
 <br/><br/>
 
