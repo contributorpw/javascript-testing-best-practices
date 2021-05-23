@@ -45,7 +45,7 @@
 
 Важный совет, общий для всех остальных (1 специальная серебрянная пуля)
 
-#### [`Section 1: The Test Anatomy`](#section-1-the-test-anatomy-1)
+#### [`Раздел 1: Анатомия теста`](#раздел-1-анатомия-теста)
 
 The foundation - structuring clean tests (12 bullets)
 
@@ -90,36 +90,36 @@ Guidelines for CI in the JS world (9 bullets)
 
 <br/><br/>
 
-# Section 1: The Test Anatomy
+# Раздел 1: Анатомия теста
 
 <br/>
 
-## ⚪ ️ 1.1 Include 3 parts in each test name
+## ⚪ ️ 1.1 Название каждого теста включает в себя 3 части
 
-:white_check_mark: **Do:** A test report should tell whether the current application revision satisfies the requirements for the people who are not necessarily familiar with the code: the tester, the DevOps engineer who is deploying and the future you two years from now. This can be achieved best if the tests speak at the requirements level and include 3 parts:
+:white_check_mark: **Делайте:** Отчет о тестировании должен сказать, удовлетворяет ли текущая ревизия приложения требованиям людям, которые не обязательно знакомы с кодовой базой: тестировщик, инженер DevOps или будущий вы два спустя.Лучше всего это может быть достигнуто, если тесты говорят на уровне требований и включают 3 части:
 
-(1) What is being tested? For example, the ProductsService.addNewProduct method
+(1) Что тестируется? Например, ProductService. Метод addNewProduct
 
-(2) Under what circumstances and scenario? For example, no price is passed to the method
+(2) При каких обстоятельствах и сценарии? Например, ни одна цена не передана методу
 
-(3) What is the expected result? For example, the new product is not approved
-
-<br/>
-
-❌ **Otherwise:** A deployment just failed, a test named “Add product” failed. Does this tell you what exactly is malfunctioning?
+(3) Какой ожидаемый результат? Например, новый продукт не одобрен
 
 <br/>
 
-**👇 Note:** Each bullet has code examples and sometime also an image illustration. Click to expand
+❌ **В противном случае:** Развертывание не удалось, тест с именем "Add product" завершился с ошибкой. Это говорит вам, что именно является неисправным?
+
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+**👇 Примечание:** Каждая пуля имеет примеры кода и иногда дополнительные иллюстрации. Нажмите, чтобы развернуть и изучить подрообнее
+<br/>
+
+<details><summary>✏ <b>Примеры кода</b></summary>
   
 <br/>
   
-### :clap: Doing It Right Example: A test name that constitutes 3 parts
+### :clap: Пример, как сделать правильно: имя теста, которое содержит все 3 части
 
-![](https://img.shields.io/badge/🔨%20Example%20using%20Mocha-blue.svg "Using Mocha to illustrate the idea")
+![alt text](https://img.shields.io/badge/🔨%20Example%20using%20Mocha-blue.svg "Using Mocha to illustrate the idea")
 
 ```javascript
 //1. unit under test
@@ -137,42 +137,42 @@ describe('Products Service', function() {
 
 <br/>
 
-### :clap: Doing It Right Example: A test name that constitutes 3 parts
+### :clap: Пример, как сделать правильно: имя теста, которое содержит все 3 части
 
-![alt text](/assets/bp-1-3-parts.jpeg "A test name that constitutes 3 parts")
+![alt text](/assets/bp-1-3-parts.jpeg "Имя теста, которое содержит все 3 части")
 
 </details>
 
 <br/>
-<details><summary>© <b>Credits & read-more</b></summary>
+<details><summary>© <b>Достоверно и Подробно</b></summary>
   1. <a href='https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html'>Roy Osherove - Naming standards for unit tests</a>
 </details>
 
 <br/><br/>
 
-## ⚪ ️ 1.2 Structure tests by the AAA pattern
+## ⚪️ ️ 1.2 Структура тестов по паттерну AAA
 
-:white_check_mark: **Do:** Structure your tests with 3 well-separated sections Arrange, Act & Assert (AAA). Following this structure guarantees that the reader spends no brain-CPU on understanding the test plan:
+:white_check_mark: **Делайте:** Структурируйте ваши тесты хорошо разделенными частями Организация, Действие и Утверждение (Arrange, Act & Assert - AAA). Следование этой структуре гарантирует, что читатель не тратит "мозг-процессор" на понимание плана теста:
 
-1st A - Arrange: All the setup code to bring the system to the scenario the test aims to simulate. This might include instantiating the unit under test constructor, adding DB records, mocking/stubbing on objects and any other preparation code
+Первое A - Организация: организуйте весь код теста для приведения системы к сценарию, который тест пытается смоделировать. Это может включать в себя создание модуля в соответствии с тестовым конструктором, добавление записей в базу данных, имитация/определение объектов и любой другой подготовительный код
 
-2nd A - Act: Execute the unit under test. Usually 1 line of code
+Второе A - Действие: выполните тест. Обычно 1 строка кода
 
-3rd A - Assert: Ensure that the received value satisfies the expectation. Usually 1 line of code
-
-<br/>
-
-❌ **Otherwise:** Not only do you spend hours understanding the main code, but what should have been the simplest part of the day (testing) stretches your brain
+Третье A - Утверждение: убедитесь, что полученные значения удовлтворяют ожиданию. Обычно 1 строка кода
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+❌ **В противном случае:** Не только вы проводите часы, пытаясь понять основной код, но то, что должно было быть самой простой частью дня (тестирование), начинает нагревать ваш мозг
 
 <br/>
 
-### :clap: Doing It Right Example: A test structured with the AAA pattern
+<details><summary>✏ <b>Примеры кода</b></summary>
 
-![](https://img.shields.io/badge/🔧%20Example%20using%20Jest-blue.svg "Examples with Jest") ![](https://img.shields.io/badge/🔧%20Example%20using%20Mocha-blue.svg "Examples with Mocha")
+<br/>
+
+### :clap: Пример, как сделать правильно: Структурированный тест по паттерну AAA
+
+![alt text](https://img.shields.io/badge/🔧%20Example%20using%20Jest-blue.svg "Examples with Jest") ![alt text](https://img.shields.io/badge/🔧%20Example%20using%20Mocha-blue.svg "Examples with Mocha")
 
 ```javascript
 describe("Customer classifier", () => {
@@ -192,7 +192,7 @@ describe("Customer classifier", () => {
 
 <br/>
 
-### :thumbsdown: Anti-Pattern Example: No separation, one bulk, harder to interpret
+### :thumbsdown: Пример антипаттерна: Нет разделения, сплошная масса, сложно интерпретировать
 
 ```javascript
 test("Should be classified as premium", () => {
