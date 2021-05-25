@@ -207,20 +207,20 @@ test("Should be classified as premium", () => {
 
 <br/><br/>
 
-## ⚪ ️1.3 Describe expectations in a product language: use BDD-style assertions
+## ⚪ ️1.3 Описывайте ожидания на языке продукта: используйте утверждения в стиле BDD
 
-:white_check_mark: **Do:** Coding your tests in a declarative-style allows the reader to get the grab instantly without spending even a single brain-CPU cycle. When you write imperative code that is packed with conditional logic, the reader is forced to exert more brain-CPU cycles. In that case, code the expectation in a human-like language, declarative BDD style using `expect` or `should` and not using custom code. If Chai & Jest doesn't include the desired assertion and it’s highly repeatable, consider [extending Jest matcher (Jest)](https://jestjs.io/docs/en/expect#expectextendmatchers) or writing a [custom Chai plugin](https://www.chaijs.com/guide/plugins/)
+:white_check_mark: **Делайте:** Программирование тестов в декларативном стиле позволяет читателю немедленно вникнуть в суть, не тратя ни одинго цикла мозг-процессора. Когда вы пишете императивный код, который упакован с условной логикой, читатель вынужден нагружать себя дополнительным вниманием. В этом случае программируйте ожидание на человеческом языке, в декларативном стиле BDD, используя слова "ожидаю" или "должен" и не используя лишний код. Chai или Jest не включает желаемое утверждение, и оно очень повторяется, рассмотрите [extending Jest Matcher (Jest)](https://jestjs.io/docs/en/expect#expectextexdmatchers) или написание [Custom Chai Plugin](https://www.chaijs.com/guide/plugins/)
 <br/>
 
-❌ **Otherwise:** The team will write less tests and decorate the annoying ones with .skip()
+❌ **В противном случае:** Команда пишет меньше тестов и украшает раздражающие блоки с помощью .skip()
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary><br/>
+<details><summary>✏ <b>Примеры кода</b></summary><br/>
 
-![](https://img.shields.io/badge/🔧%20Example%20using%20Mocha-blue.svg "Examples with Mocha & Chai") ![](https://img.shields.io/badge/🔧%20Example%20using%20Jest-blue.svg "Examples with Jest")
+![alt text](https://img.shields.io/badge/🔧%20Example%20using%20Mocha-blue.svg "Examples with Mocha & Chai") ![alt text](https://img.shields.io/badge/🔧%20Example%20using%20Jest-blue.svg "Examples with Jest")
 
-### :thumbsdown: Anti-Pattern Example: The reader must skim through not so short, and imperative code just to get the test story
+### :thumbsdown: Пример антипаттерна: Читатель должен пройти долгой дорогой по коду, просто чтобы получить понимание о тесте
 
 ```javascript
 test("When asking for an admin, ensure only ordered admins in results", () => {
@@ -250,7 +250,7 @@ test("When asking for an admin, ensure only ordered admins in results", () => {
 
 <br/>
 
-### :clap: Doing It Right Example: Skimming through the following declarative test is a breeze
+### :clap: Пример, как сделать правильно: Беглый взгляд на следующий декларативный тест подобен легкому бризу
 
 ```javascript
 it("When asking for an admin, ensure only ordered admins in results", () => {
@@ -267,21 +267,21 @@ it("When asking for an admin, ensure only ordered admins in results", () => {
 
 <br/><br/>
 
-## ⚪ ️ 1.4 Stick to black-box testing: Test only public methods
+## ⚪ ️ 1.4 Придерживайтесь тестирования черного ящика: тестирование только общедоступных методов
 
-:white_check_mark: **Do:** Testing the internals brings huge overhead for almost nothing. If your code/API delivers the right results, should you really invest your next 3 hours in testing HOW it worked internally and then maintain these fragile tests? Whenever a public behavior is checked, the private implementation is also implicitly tested and your tests will break only if there is a certain problem (e.g. wrong output). This approach is also referred to as `behavioral testing`. On the other side, should you test the internals (white box approach) — your focus shifts from planning the component outcome to nitty-gritty details and your test might break because of minor code refactors although the results are fine - this dramatically increases the maintenance burden
+:white_check_mark: **Делайте:** Тестирование внутренних взаимодействий приносит огромные накладные расходы и почти ничего в результате. Если ваш код или API обеспечивают правильные результаты, должны ли вы действительно ваши следующие 3 часа в тестирование того, как они работают внутри, а затем поддерживать эти хрупкие тесты? Всякий раз, когда проверяется публичное поведение, внутренняя реализация также неявно проверяется, и ваши тесты сломаются только в том случае, если есть определенная проблема (например, неправильный вывод). Этот подход также называется "поведенческим тестированием". С другой стороны, если вы должны протестировать внутреннее состояние или поведение (подход белого ящика) - ваш фокус сдвигается от планирования результата компонента к мелким деталям, и ваш тест может сломаться из-за незначительных изменений кода, хотя общие результаты останутся в порядке - это резко увеличивает нагрузку обслуживания
 <br/>
 
-❌ **Otherwise:** Your tests behave like the [boy who cried wolf](https://en.wikipedia.org/wiki/The_Boy_Who_Cried_Wolf): shouting false-positive cries (e.g., A test fails because a private variable name was changed). Unsurprisingly, people will soon start to ignore the CI notifications until someday, a real bug gets ignored…
+❌ **В противном случае:** Ваши тесты поведут себя как [мальчик, который кричал "волки"](https://en.wikipedia.org/wiki/the_boy_who_cred_wof): выдавать ложноположительные сообщения (например, тесты терпят неудачу, потому что приватная переменная была изменена). Неудивительно, что люди скоро начнут игнорировать уведомления CI, пока когда-нибудь не выявится реальная ошибка ...
 
 <br/>
-<details><summary>✏ <b>Code Examples</b></summary>
+<details><summary>✏ <b>Примеры кода</b></summary>
 
 <br/>
 
-### :thumbsdown: Anti-Pattern Example: A test case is testing the internals for no good reason
+### :thumbsdown: Пример антипаттерна: Кейс тестирования внутреннего состояния без веской причины
 
-![](https://img.shields.io/badge/🔧%20Example%20using%20Mocha-blue.svg "Examples with Mocha & Chai")
+![alt text](https://img.shields.io/badge/🔧%20Example%20using%20Mocha-blue.svg "Examples with Mocha & Chai")
 
 ```javascript
 class ProductService {
@@ -309,26 +309,26 @@ it("White-box test: When the internal methods get 0 vat, it return 0 response", 
 
 <br/><br/>
 
-## ⚪ ️ ️1.5 Choose the right test doubles: Avoid mocks in favor of stubs and spies
+## ⚪ ️ ️1.5 Выберите правильные тестовые пары: Избегайте имитаций в пользу заглушек и шпионов
 
-:white_check_mark: **Do:** Test doubles are a necessary evil because they are coupled to the application internals, yet some provide immense value (<a href="https://martinfowler.com/articles/mocksArentStubs.html" data-href="https://martinfowler.com/articles/mocksArentStubs.html" class="markup--anchor markup--p-anchor" rel="noopener nofollow" target="_blank">[Read here a reminder about test doubles: mocks vs stubs vs spies](https://martinfowler.com/articles/mocksArentStubs.html)</a>).
+:white_check_mark: **Делайте:** Тестовые пары являются необходимым злом, потому что они связаны с внутренностями приложения, но некоторые оказывают огромное значение (<a href="https://martinfowler.com/articles/mocksArentStubs.html" data-href="https://martinfowler.com/articles/mocksArentStubs.html" class="markup--anchor markup--p-anchor" rel="noopener nofollow" target="_blank">[Read here a reminder about test doubles: mocks vs stubs vs spies](https://martinfowler.com/articles/mocksArentStubs.html)</a>).
 
-Before using test doubles, ask a very simple question: Do I use it to test functionality that appears, or could appear, in the requirements document? If no, it’s a white-box testing smell.
+Прежде чем использовать тестовые пары, задайте очень простой вопрос: использую ли я их для тестирования функциональности, которая только реализуется или может появиться в будущем? Если нет, это тестирование белого ящика.
 
-For example, if you want to test that your app behaves reasonably when the payment service is down, you might stub the payment service and trigger some ‘No Response’ return to ensure that the unit under test returns the right value. This checks our application behavior/response/outcome under certain scenarios. You might also use a spy to assert that an email was sent when that service is down — this is again a behavioral check which is likely to appear in a requirements doc (“Send an email if payment couldn’t be saved”). On the flip side, if you mock the Payment service and ensure that it was called with the right JavaScript types — then your test is focused on internal things that have nothing to do with the application functionality and are likely to change frequently
+Например, если вы хотите проверить, что ваше приложение ведет себя разумно, когда платежная служба недоступна, вы можете намерено остановить платежное обслуживание и вернуть некоторое сообщение "Нет ответа", чтобы убедиться, что метод в тесте возвращает правильное значение. Это проверяет приложение поведение/ответ/результат в соответствии с определенными сценариями. Вы также можете использовать шпиона, чтобы удостовериться, что электронное письмо было отправлено, когда эта служба недоступена - это поведенческая проверка, которая, вероятно, понадобиться в будущем ("Отправить письмо, если оплата не может быть сохранена"). С другой стороны, если вы нагружаете платежную систему и пытаетесь убедиться, что како-то метод был вызван с правильными типами JavaScript - тогда ваш тест сосредоточен на внутренних вещах, которые не имеют никакого отношения к функциональности приложения и, вероятно, часто будут меняться
 <br/>
 
-❌ **Otherwise:** Any refactoring of code mandates searching for all the mocks in the code and updating accordingly. Tests become a burden rather than a helpful friend
-
-<br/>
-
-<details><summary>✏ <b>Code Examples</b></summary>
+❌ **В противном случае:** Любой рефакторинг кода потребует поиска всех имитаций в коде и, соответственно, обновления. Тесты становятся бременем, а не полезным другом
 
 <br/>
 
-### :thumbsdown: Anti-pattern example: Mocks focus on the internals
+<details><summary>✏ <b>Примеры кода</b></summary>
 
-![](https://img.shields.io/badge/🔧%20Example%20using%20Sinon-blue.svg "Examples with Sinon")
+<br/>
+
+### :thumbsdown: Пример антипаттерна: Макеты сосредоточены на внутренностях
+
+![alt text](https://img.shields.io/badge/🔧%20Example%20using%20Sinon-blue.svg "Examples with Sinon")
 
 ```javascript
 it("When a valid product is about to be deleted, ensure data access DAL was called once, with the right product and right config", async () => {
@@ -346,7 +346,7 @@ it("When a valid product is about to be deleted, ensure data access DAL was call
 
 <br/>
 
-### :clap:Doing It Right Example: spies are focused on testing the requirements but as a side-effect are unavoidably touching to the internals
+### :clap: Пример, как сделать правильно: Шпионы сосредоточены на тестировании требований, но в качестве побочных эффектов неизбежно касаются внутреннего поведения
 
 ```javascript
 it("When a valid product is about to be deleted, ensure an email is sent", async () => {
@@ -362,28 +362,28 @@ it("When a valid product is about to be deleted, ensure an email is sent", async
 
 <br/><br/>
 
-## 📗 Want to learn all these practices with live video?
+## 📗 Хотите узнать все эти практики с помощью видео?
 
-### Visit my online course [Testing Node.js & JavaScript From A To Z](https://www.testjavascript.com)
+### Посетите онлайн-курс [Testing Node.js & JavaScript From A To Z](https://www.testjavascript.com)
 
 <br/><br/>
 
-## ⚪ ️1.6 Don’t “foo”, use realistic input data
+## ⚪ ️1.6 Избегайте "foo"-значений, используйте реальные данные для ввода
 
-:white_check_mark: **Do:** Often production bugs are revealed under some very specific and surprising input — the more realistic the test input is, the greater the chances are to catch bugs early. Use dedicated libraries like [Faker](https://www.npmjs.com/package/faker) to generate pseudo-real data that resembles the variety and form of production data. For example, such libraries can generate realistic phone numbers, usernames, credit card, company names, and even ‘lorem ipsum’ text. You may also create some tests (on top of unit tests, not as a replacement) that randomize fakers data to stretch your unit under test or even import real data from your production environment. Want to take it to the next level? See the next bullet (property-based testing).
+:whte_check_mark: **Делайе:** Часто производственные ошибки раскрываются на одном очень специфическом и удачно параметре при вводе - чем более реалистичными являются тестовые данные на входе, тем больше шансы рано обнаружить проблему. Используйте специальные библиотеки, такие как [Faker](https://www.npmjs.com/package/faker) для генерации псевдореальных данных, которые предполагают разнообразие и форму реальных данных. Например, такие библиотеки могут генерировать реалистичные телефонные номера, имена пользователей, кредитные карты, названия компаний и даже текст "Lorem ipsum". Вы также можете создать некоторые тесты (на верхнем уровне модульных тестов, а не в качестве замены), которые рандомизируют ваши фейковые данные для расширения покрытия ваших тесте или даже импортируют реальные данные из вашей производственной среды. Хотите взять подобные генераторы внутрь вашей системы тестирвоания? Смотрите следующую пулю (тесты, основанные на свойствах)
 <br/>
 
-❌ **Otherwise:** All your development testing will falsely show green when you use synthetic inputs like “Foo”, but then production might turn red when a hacker passes-in a nasty string like “@3e2ddsf . ##’ 1 fdsfds . fds432 AAAA”
-
-<br/>
-
-<details><summary>✏ <b>Code Examples</b></summary>
+❌ **В противном случае:** Все ваши тесты при разработке будут ложно выдавать положительный результат, при использовании синтетических данных, таких как "Foo", но затем в реальной работе результат окажется отрицательным, когда хакер передает что-то неприятное в строке типа "3E2DDSF.## '1 FDDFDS.FDS432 AAAA"
 
 <br/>
 
-### :thumbsdown: Anti-Pattern Example: A test suite that passes due to non-realistic data
+<details><summary>✏ <b>Примеры кода</b></summary>
 
-![](https://img.shields.io/badge/🔧%20Example%20using%20Jest-blue.svg "Examples with Jest")
+<br/>
+
+### :thumbsdown: Пример антипаттерна: Тест, который проходит на нереалистичных данных
+
+![alt text](https://img.shields.io/badge/🔧%20Example%20using%20Jest-blue.svg "Examples with Jest")
 
 ```javascript
 const addProduct = (name, price) => {
@@ -406,7 +406,7 @@ test("Wrong: When adding new product with valid properties, get successful confi
 
 <br/>
 
-### :clap:Doing It Right Example: Randomizing realistic input
+### :clap: Пример, как сделать правильно: Рандогимизация реалистичного ввода
 
 ```javascript
 it("Better: When adding new valid product, get successful confirmation", async () => {
